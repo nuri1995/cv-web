@@ -1,21 +1,177 @@
-body {
+@mixin tablet {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@function diagonal($color1, $color2) {
+  @return linear-gradient(to right bottom, $color1 50%, $color2 50%);
+}
+
+.page {
   margin: 0;
-  padding: 30px;
-  font-family: $font-family-sans-serif;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+  padding: 0;
+  font-family: $font-family-text;
+  color: $grey-color;
+  font-size: 0.8em;
+
+  @include tablet {
+    font-size: 1em;
+  }
+
+  @include large {
+    font-size: 1.2em;
+  }
 }
 
-.uoc-logo {
-  display: block;
-  margin-bottom: 20px;
-  max-width: 300px;
-  height: auto;
+.header {
+  width: 100%;
+  background: diagonal($pink-color, white);
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: solid 40px $grey-color;
+  margin-bottom: 30px;
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: $uoc-corporate;
+.info {
+  width: 90%;
+  margin: 0 auto;
+  font-family: $font-family-titles;
+
+  @include desktop {
+    display: grid;
+    justify-content: space-around;
+    justify-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  &__fotocontainer {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include desktop {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      width: 80%;
+    }
+
+    @include large {
+      width: 65%;
+    }
+  }
+
+  &__foto {
+    width: 100%;
+    margin: 0 auto;
+    border: 8px solid white;
+  }
+
+  &__name {
+    margin-bottom: 40px;
+
+    @include desktop {
+      grid-column-start: 3;
+      grid-column-end: 6;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 7px;
+    font-size: 2em;
+  }
+
+  &__info {
+    margin-top: 0;
+    font-size: 1.2em;
+  }
+}
+
+.content {
+  width: 90%;
+  margin: 0 auto;
+
+  @include desktop {
+    width: 85%;
+  }
+
+  @include large {
+    width: 75%;
+  }
+
+  &__section {
+    margin-bottom: 80px;
+  }
+
+  &__title {
+    font-family: $font-family-titles;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  &__year {
+    font-size: 1.1em;
+  }
+
+  &__year,
+  &__info--bold {
+    font-weight: bold;
+  }
+
+  &__languages,
+  &__table {
+    border: 2px solid $grey-color;
+    border-collapse: collapse;
+    margin: 0 auto;
+    padding: 7px;
+    text-align: center;
+  }
+
+  &__table {
+    width: 70%;
+  }
+
+  &__list {
+    padding: 0;
+    list-style-type: circle;
+    list-style-position: inside;
+  }
+
+  &__row {
+    margin-top: 10px;
+  }
+}
+
+.footer {
+  width: 100%;
+  background: $pink-color;
+  border-top: 10px solid $grey-color;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 0.8em;
+  margin-top: 30px;
 }

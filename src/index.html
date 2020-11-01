@@ -1,22 +1,173 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <img src="assets/images/logo.png" alt="Universitat Oberta de Catalunya" class="uoc-logo">
-    <h1 class="uoc-title">Hello, UOC!</h1>
-    <p>
-      This is a starter template for the Advanced HTML and CSS Tools courses
-      from the Master's Program in Multimedia Applications and the Master's
-      Program in Web App and Website Development at the Universitat Oberta de
-      Catalunya.
-    </p>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <meta name="author" content="Núria Cruz" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="shortcut icon"
+            href="assets/images/perfil.jpg"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./assets/styles/main.scss"
+        />
+        <!-- do not remove this line! -->
+        <title>Curriculum Vitae</title>
+    </head>
+    <body class="page">
+        <header class="header">
+            <div class="info">
+                <div class="info__fotocontainer">
+                    <img class="info__foto" src="assets/images/perfil.jpg" />
+                </div>
+                <div class="info__name">
+                    <h1 class="info__title">NÚRIA CRUZ SANCHEZ</h1>
+                    <h2 class="info__subtitle">
+                        SAP ABAP Developer & Consultor
+                    </h2>
+                </div>
+                <div class="info__container">
+                    <p class="info__logo"><i class="fas fa-phone"></i></p>
+                    <p class="info__info">+34 666 666 666</p>
+                </div>
+                <div class="info__container">
+                    <p class="info__logo"><i class="fas fa-envelope"></i></p>
+                    <p class="info__info">nuri.cruz.sanchez@gmail.com</p>
+                </div>
+                <div class="info__container">
+                    <p class="info__logo">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </p>
+                    <p class="info__info">Barcelona</p>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <h2 class="content__title">
+                <i class="fas fa-graduation-cap"></i> EDUCATION
+            </h2>
+            <section class="content__section">
+                <p class="content__year">2019 – PRESENT</p>
+                <p class="content__info">
+                    <span class="content__info content__info--bold"
+                        >Master´s Degree in Website Development and Web
+                        Applications</span
+                    >, Universitat Politècnica de Catalunya (UOC), Barcelona.
+                </p>
+                <p class="content__year">2013 – 2017</p>
+                <p class="content__info">
+                    <span class="content__info content__info--bold"
+                        >Bachelor´s Degree in Engineering of Electronic
+                        Communication Systems</span
+                    >, Universitat Politècnica de Catalunya (UPC), Barcelona.
+                </p>
+            </section>
+            <h2 class="content__title">
+                <i class="fas fa-briefcase"></i> PROFESSIONAL EXPERIENCE
+            </h2>
+            <section class="content__section">
+                <p class="content__year">2017-09-18 – PRESENT</p>
+                <p class="content__info">
+                    <span class="content__info content__info--bold"
+                        >EY, Ernst and Young.</span
+                    >
+                    Technic programmer in PI-IT Advisory Department –
+                    Hospitality projects.
+                </p>
+                <p class="content__year">2017-02-20 – 2017-09-15</p>
+                <p class="content__info">
+                    <span class="content__info content__info--bold">
+                        Cellnex Telecom.
+                    </span>
+                    Intern on Telecommunication System Department.
+                </p>
+            </section>
+            <h2 class="content__title">
+                <i class="fas fa-cogs"></i> DEVELOPED SKILLS
+            </h2>
+            <section class="content__section">
+                <ul class="content__list">
+                    <li class="content__row">
+                        Skills in code analysis for the incidents identification
+                        and resolution.
+                    </li>
+                    <li class="content__row">
+                        Ability to write technical documents about projects
+                    </li>
+                    <li class="content__row">
+                        Knowledge about hospitality and tourism business
+                    </li>
+                    <li class="content__row">
+                        Dealing with the client in the advisory sector
+                    </li>
+                    <li class="content__row">
+                        Ability to perform tasks within deadlines
+                    </li>
+                    <li class="content__row">
+                        Empathic, social, proactive and polite manners with
+                        others
+                    </li>
+                    <li class="content__row">
+                        Self-motivated, responsible, punctual, reliable, serene
+                        and teamwork player
+                    </li>
+                </ul>
+            </section>
+            <h2 class="content__title">
+                <i class="fas fa-globe-americas"></i> LANGUAGES
+            </h2>
+            <section class="content__section">
+                <table class="content__table">
+                    <tr>
+                        <th class="content__languages">Spanish</th>
+                        <td class="content__languages">Mother tongue</td>
+                    </tr>
+                    <tr>
+                        <th class="content__languages">Catalan</th>
+                        <td class="content__languages">Mother tongue</td>
+                    </tr>
+                    <tr>
+                        <th class="content__languages">English</th>
+                        <td class="content__languages">First Certification</td>
+                    </tr>
+                </table>
+            </section>
 
-    <script src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+            <h2 class="content__title">
+                <i class="fas fa-laptop-code"></i> PROGRAMMING SKILLS AND
+                KNOWLEDGE
+            </h2>
+            <section class="content__section">
+                <ul class="content__list">
+                    <li class="content__row">
+                        SAP – TMS, TMSfor Connectivity and TMSfor Loyalty
+                        modules
+                    </li>
+                    <li class="content__row">SAP ABAP Programming</li>
+                    <li class="content__row">SAP HANA Programming</li>
+
+                    <li class="content__row">Javascript</li>
+                    <li class="content__row">Java</li>
+                    <li class="content__row">HTML</li>
+                    <li class="content__row">CSS</li>
+                    <li class="content__row">MATLAB</li>
+                    <li class="content__row">C++</li>
+                    <li class="content__row">C</li>
+                </ul>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <div class="footer__container">
+                <p class="footer__info">© 2020-2021 Núria Cruz Sanchez.</p>
+            </div>
+        </footer>
+        <script src="./assets/scripts/main.js"></script>
+        <!-- do not remove this line! -->
+    </body>
 </html>
