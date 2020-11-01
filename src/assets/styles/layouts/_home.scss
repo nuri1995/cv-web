@@ -141,6 +141,10 @@
     font-weight: bold;
   }
 
+  &__table {
+    width: 70%;
+  }
+
   &__languages,
   &__table {
     border: 2px solid $grey-color;
@@ -148,10 +152,6 @@
     margin: 0 auto;
     padding: 7px;
     text-align: center;
-  }
-
-  &__table {
-    width: 70%;
   }
 
   &__list {
